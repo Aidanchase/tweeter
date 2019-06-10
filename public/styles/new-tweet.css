@@ -1,0 +1,23 @@
+.new-tweet{
+    width: 20rem;
+    border: 0.1em solid #eee;
+    margin: 1em auto auto auto;
+    padding-left: 2rem;
+    padding-right: 2rem;    
+    padding-bottom: 2rem;
+    background-color: #eee;
+    border-radius: 1.5em;
+    margin-bottom: 2em;
+  }
+  .text-area{
+    padding:1em;
+  }
+
+.new-tweet input{
+    padding:.6em;
+    border-radius: .4em;
+    
+}
+.new-tweet span{
+    float: right;
+}
