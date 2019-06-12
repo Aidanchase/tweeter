@@ -1,86 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i&display=swap" rel="stylesheet">
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-    <link rel ="stylesheet" href="/styles/nav.css" type="text/css"/>
-    <link rel ="stylesheet" href="/styles/new-tweet.css" type="text/css"/>
-    <!-- External JS -->
-    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+<head>
+  <!-- Meta Information -->
+  <title>Tweeter - Home Page</title>
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/app.js"></script>
-    <script type = "text/javascript" src="./scripts/composer-num-counter.js"></script>
-      </head>
+  <!-- External CSS -->
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i&display=swap" rel="stylesheet">
+  <!-- App CSS -->
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <!-- External JS -->
+  <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
-  <body>
-    <!-- Top nav bar (fixed) -->
-    <nav id="nav-bar">
-      <img class="logo" src="/images/bird.png">
-      <span class="header">Tweeter</span>
-    </nav>
+  <!-- App JS -->
+  <script type="text/javascript" src="/scripts/app.js"></script>
+  <script type="text/javascript" src="./scripts/composer-num-counter.js"></script>
+</head>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-        <section class="new-tweet">
-            <h2>Compose Tweet</h2>
-            <hr>
-            <form action="/tweets" method="POST">
-              <textarea class="text-area" name="text" placeholder="What are you humming about?"></textarea>
-              <input type="submit" value="Tweet">
-              <span class="counter">140</span>
-            </form>
-           </section>
-          FLAVIUS, MARULLUS, CIVIUM TURBA.
+<body>
+  <!-- Top nav bar (fixed) -->
+  <nav id="nav-bar">
+    <img class="logo" src="/images/bird.png">
+    <span class="header">Tweeter</span>
+  </nav>
 
-Flav.—Hinc, domum, ignavi; apagite, domum; num hodie ferias agitis? Quid? Nescitisne nefas esse cuivis artifici die profesto deambulare, nisi insignibus artis suæ induto? Heus tu! Cujusnam artis tu artifex?
+  <!-- Page-specific (main) content here -->
+  <main class="container">
+    <section class="new-tweet">
+      <h2>Compose Tweet</h2>
+      <hr>
+      <form action="/tweets" method="POST">
+        <textarea class="text-area" name="text" placeholder="What are you humming about?"></textarea>
+        <input type="submit" value="Tweet">
+        <span class="counter">140</span>
+      </form>
+    </section>
+    <section id="tweet-container">
+      <article>
+        <header class="user-info">
+          <div class="user-profile">
+            <img class="user-avatar" src="https://vanillicon.com/788e533873e80d2002fa14e1412b4188_50.png">
+            <h2 class="username">eat</h2>
+          </div>
+          <span class="tweeter-handle">
+            @bobsBurgers
+          </span>
+        </header>
+        <section class="tweet-text">
+          Today, we dance.
+        </section>
+        <hr>
+        <footer class="tweet-time-stamp">
+          10hrs
+        </footer>
+      </article>
+    </section>
 
-Civis 1.—Ego, domine, faber lignarius.
+    FLAVIUS, MARULLUS, CIVIUM TURBA.
 
-Mar.—Ubi ergo vestis coriacea? ubi regula? quid vult vestitus iste nitidior? Heus et tu; quamnam et tu artem?
+    Flav.—Hinc, domum, ignavi; apagite, domum; num hodie ferias agitis? Quid? Nescitisne nefas esse cuivis artifici die
+    profesto deambulare, nisi insignibus artis suæ induto? Heus tu! Cujusnam artis tu artifex?
 
-Civis 2.—Nullam sane artem ego, domine; opifex sum inops, non artifex.
+    Civis 1.—Ego, domine, faber lignarius.
 
-Mar.—Qualis ergo opifex? Statim dicas.
+    Mar.—Ubi ergo vestis coriacea? ubi regula? quid vult vestitus iste nitidior? Heus et tu; quamnam et tu artem?
 
-Civis 2.—Honestus, spero, neque infimus; quamvis inter ima hominum versor.
+    Civis 2.—Nullam sane artem ego, domine; opifex sum inops, non artifex.
 
-Mar.—Quale opus, impudens? quale opus tuum?
+    Mar.—Qualis ergo opifex? Statim dicas.
 
-Civis 2.—Ne, domine, rumparis. Sin te ruperis, ego te consuere possum.
+    Civis 2.—Honestus, spero, neque infimus; quamvis inter ima hominum versor.
 
-Mar.—Mene consuere? quid vis, procax?
+    Mar.—Quale opus, impudens? quale opus tuum?
 
-Civis 2.—Calceos nempe tuos, domine.
+    Civis 2.—Ne, domine, rumparis. Sin te ruperis, ego te consuere possum.
 
-Mar.—Ergone sutor es?
+    Mar.—Mene consuere? quid vis, procax?
 
-Civis 2.—Immo, sutor, et totus in subulâ: nîl ego ultra crepidam. Calceorum veterum chirurgus sum; illos, quantumvis ægros, redintegro. Eorum qui bovino corio insistunt, nulli decentiores quam qui operi meo innituntur.
+    Civis 2.—Calceos nempe tuos, domine.
 
-Mar.—Quare autem hodie foris? Quid est quod hosce tecum circa vias ducis?
+    Mar.—Ergone sutor es?
 
-Civis 2.—Quid? nisi ut calceos terant, quos ad me reparandos ferant. Sed tamen, ut verum dicam, domine, ferias agimus, ut Cæsarem spectemus, et in ejus triumpho lætemur.
+    Civis 2.—Immo, sutor, et totus in subulâ: nîl ego ultra crepidam. Calceorum veterum chirurgus sum; illos, quantumvis
+    ægros, redintegro. Eorum qui bovino corio insistunt, nulli decentiores quam qui operi meo innituntur.
 
-Mar.—Et quapropter "lætemur?" Quam victoriæ mercedem secum iste retulit? Quot captos duces, qui devincti currum ejus triumphalem exornent? O vos stipites, O lapides, O si quid sit istis magis iners stupidumque; O dura ilia; O Romani excordes; nonne Pompeium meministis? Quoties in muros et crepidines, in turres fenestrasque, immo atque in summa tectorum culmina scandebatis, infantibus vobiscum adductis, et diem totum ibi insidebatis, quam patienter expectantes dum Magnus per Romæ vias pompam duceret: curruque ejus vixdum viso, nonne vos tantum clamorem tollebatis, ut ipse contremeret Tiberis, strepitu per concavas ripas replicato? Iidemque nunc induitisne vestitum lautiorem, ferias injussi agitis, et flores coram illo ipso spargitis, qui super Pompeii cadaver triumphans incedit? Abite! domos festinate, flexisque genibus Deos supplicate, ut stragem ingratis animis summo jure debitam avertant.
+    Mar.—Quare autem hodie foris? Quid est quod hosce tecum circa vias ducis?
 
-Fla.—Ite, redite, mî boni; et, ut culpam eluatis, vos, et vestrûm consimilis turba, ad Tiberim adstantes, lacrymas in alveum instillate, donec, amnis, modo tenuis, exundans summam ripam supersiliat.
+    Civis 2.—Quid? nisi ut calceos terant, quos ad me reparandos ferant. Sed tamen, ut verum dicam, domine, ferias
+    agimus, ut Cæsarem spectemus, et in ejus triumpho lætemur.
 
-[Exeunt CIVES.
+    Mar.—Et quapropter "lætemur?" Quam victoriæ mercedem secum iste retulit? Quot captos duces, qui devincti currum ejus
+    triumphalem exornent? O vos stipites, O lapides, O si quid sit istis magis iners stupidumque; O dura ilia; O Romani
+    excordes; nonne Pompeium meministis? Quoties in muros et crepidines, in turres fenestrasque, immo atque in summa
+    tectorum culmina scandebatis, infantibus vobiscum adductis, et diem totum ibi insidebatis, quam patienter
+    expectantes dum Magnus per Romæ vias pompam duceret: curruque ejus vixdum viso, nonne vos tantum clamorem
+    tollebatis, ut ipse contremeret Tiberis, strepitu per concavas ripas replicato? Iidemque nunc induitisne vestitum
+    lautiorem, ferias injussi agitis, et flores coram illo ipso spargitis, qui super Pompeii cadaver triumphans incedit?
+    Abite! domos festinate, flexisque genibus Deos supplicate, ut stragem ingratis animis summo jure debitam avertant.
 
-Viden' ut vilis ista fæx plebis movetur! taciti consciique dilabuntur. Tu illac ad Capitolium; ego hac: statuas, si quas exornatas inveneris, denuda.
+    Fla.—Ite, redite, mî boni; et, ut culpam eluatis, vos, et vestrûm consimilis turba, ad Tiberim adstantes, lacrymas
+    in alveum instillate, donec, amnis, modo tenuis, exundans summam ripam supersiliat.
 
-Mar.—Nonne nefas? Lupercalia agimus.
+    [Exeunt CIVES.
 
-Fla.—Quid ad rem? Nullam statuam Cæsaris tropæis exornari decet. Ego circumibo, vulgusque de viis compellam; idem fac et tu, sicubi confertos videas. Plumis hisce nascentibus de alâ avulsis, altius Cæsar se levare non poterit, qui harum ope trans oculos volitaret, nos omnes, utpote servos, de cælo territurus.
+    Viden' ut vilis ista fæx plebis movetur! taciti consciique dilabuntur. Tu illac ad Capitolium; ego hac: statuas, si
+    quas exornatas inveneris, denuda.
+
+    Mar.—Nonne nefas? Lupercalia agimus.
+
+    Fla.—Quid ad rem? Nullam statuam Cæsaris tropæis exornari decet. Ego circumibo, vulgusque de viis compellam; idem
+    fac et tu, sicubi confertos videas. Plumis hisce nascentibus de alâ avulsis, altius Cæsar se levare non poterit, qui
+    harum ope trans oculos volitaret, nos omnes, utpote servos, de cælo territurus.
 
 
-      </main>
+  </main>
 
-  </body>
+</body>
+
 </html>

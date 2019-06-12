@@ -3,11 +3,14 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
- 
+
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -22,11 +25,53 @@ body {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
- .container {
-   margin: 100px auto 0 auto;
-   width: 450px;
-   height: 100rem;
-   background-color: #ffffff;
-   padding-top: .1em;
- }
+.container {
+  margin: 10em auto 0 auto;
+  width: 45em;
+  height: 100em;
+  background-color: #ffffff;
+  padding-top: .1em;
+}
 
+#tweet-container {
+  border: .1em solid #eee;
+  border-radius: 1.5em;
+  margin: 1em auto 4em auto;
+  width: 20em;
+}
+
+#tweet-container article header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #eee;
+  border-top-left-radius: 1.5em;
+  border-top-right-radius: 1.5em;
+}
+#tweet-container article header .user-profile{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#tweet-container article header .user-profile .user-avatar {
+  padding: 1em;
+  border-radius: 1.5em;
+}
+
+#tweet-container article header .tweeter-handle {
+  justify-content: flex-end;
+  color: #bcbcbc;
+  padding: .5em;
+}
+
+#tweet-container .tweet-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 6em;
+  padding: .5em;
+}
+
+#tweet-container footer{
+  padding: .5em;
+}
