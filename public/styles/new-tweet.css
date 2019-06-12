@@ -10,7 +10,8 @@
     margin-bottom: 2em;
   }
   .new-tweet hr{
-      padding : .5em;
+      padding : .25em;
+      border-left-width: 0px;
   }
   .text-area{
     padding:1em;

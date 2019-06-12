@@ -35,12 +35,35 @@ body {
 
  
 #tweet-container {
-  border: .1em solid #eee;
   border-radius: 1.5em;
   margin: 1em auto 4em auto;
   width: 20em;
 }
 
+#tweet-container:hover .user-action-icons{
+  opacity: 1;
+}
+#tweet-container:hover article header{
+  opacity: 1;
+}
+#tweet-container:hover .user-profile{
+  opacity: 1;
+}
+#tweet-container:hover .user-avatar{
+  opacity: 1;
+}
+#tweet-container:hover .tweeter-handle{
+  opacity: 1;
+}
+#tweet-container:hover footer{
+  opacity: 1;
+}
+
+#tweet-container article{
+  border: .1em solid #eee;
+  border-radius: 1.5em;
+  margin: 2em;
+}
 #tweet-container article header {
   display: flex;
   align-items: center;
@@ -54,17 +77,20 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  opacity: 0.5;
 }
 
 #tweet-container article header .user-profile .user-avatar {
   padding: 1em;
   border-radius: 1.5em;
+  opacity: 0.5;
 }
 
 #tweet-container article header .tweeter-handle {
   justify-content: flex-end;
   color: #bcbcbc;
   padding: .5em;
+  opacity: 0.5;
 }
 
 #tweet-container .tweet-text {
@@ -79,14 +105,19 @@ body {
   display: flex;
   justify-content: space-between;
   align-content: center;
-  padding: .2em;
+  padding: .4em;
+  opacity: 0.5;
 }
-
+#tweet-container  hr{
+  opacity: 0.2;
+}
 #tweet-container footer .time-stamp {
   padding: .2em;
+  opacity: 1;
 }
 
 #tweet-container footer .user-action-icons {
   padding: .2em;
   color: #70d3e5;
+  opacity: 0;
 }
