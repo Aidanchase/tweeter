@@ -33,6 +33,7 @@ body {
   padding-top: .1em;
 }
 
+ 
 #tweet-container {
   border: .1em solid #eee;
   border-radius: 1.5em;
@@ -48,11 +49,13 @@ body {
   border-top-left-radius: 1.5em;
   border-top-right-radius: 1.5em;
 }
-#tweet-container article header .user-profile{
+
+#tweet-container article header .user-profile {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
+
 #tweet-container article header .user-profile .user-avatar {
   padding: 1em;
   border-radius: 1.5em;
@@ -64,7 +67,7 @@ body {
   padding: .5em;
 }
 
-#tweet-container .tweet-text{
+#tweet-container .tweet-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,6 +75,18 @@ body {
   padding: .5em;
 }
 
-#tweet-container footer{
-  padding: .5em;
+#tweet-container footer {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding: .2em;
+}
+
+#tweet-container footer .time-stamp {
+  padding: .2em;
+}
+
+#tweet-container footer .user-action-icons {
+  padding: .2em;
+  color: #70d3e5;
 }
