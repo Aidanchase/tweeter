@@ -4,19 +4,23 @@
     margin: 1em auto auto auto;
     padding-left: 2rem;
     padding-right: 2rem;    
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
     background-color: #eee;
     border-radius: 1.5em;
     margin-bottom: 2em;
   }
+  .new-tweet hr{
+      paddingva : .5em;
+  }
   .text-area{
     padding:1em;
+    width: 100%;
   }
 
 .new-tweet input{
     padding:.6em;
     border-radius: .4em;
-    
+    float: left;
 }
 .new-tweet span{
     float: right;
