@@ -25,3 +25,18 @@
 .new-tweet span{
     float: right;
 }
+
+.counter[data-status=normal]{
+    color: black;
+
+}
+
+.counter[data-status=over]{
+    color: red;
+
+}
+
+.counter[data-status=warning]{
+    color: orange;
+
+}
