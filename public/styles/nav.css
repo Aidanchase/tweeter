@@ -2,17 +2,17 @@
     position: fixed;
     align-items: center;
     width: 100%;
-    height: 80px;
+    height: 150px;
     top: 0;
     padding-left: 2em;
     padding-right: 2em;
-    background-color: #00a087;
+    background-image: linear-gradient(315deg, #d19592 0%, #c81f70 74%);
     color: #e8fdff;
 }
 
 #nav-bar .logo {
-    height: 80px;
-    width: 80px;
+    height: 140px;
+    width: 140px;
     float: left;
 }
 

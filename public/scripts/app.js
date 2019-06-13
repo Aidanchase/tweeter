@@ -31,13 +31,14 @@ function createTweetElement(tweetData) { //template literals used to render new 
 }
 
 function renderTweets(data) {
-  console.log(data);
   for (let user of data) {
     $("#tweet-container").prepend(createTweetElement(user))
   }
 }
 
-
+function renderTweet(data){
+  $("#tweet-container").prepend(createTweetElement(data))
+}
 
 function loadTweets() { //$jquery/ ajax request to load new tweets onto page and add tweets to database
   $.ajax({
@@ -77,7 +78,7 @@ $(function () {
           type: "GET",
           url: "/tweets",
           success: function (response) {
-            renderTweets(response);
+            renderTweet(response[response.length -1]); 
           },
         })
       }
