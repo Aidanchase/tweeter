@@ -41,32 +41,31 @@ function renderTweets(data) {
 // })
 
 
+  function loadTweets() {
+    $.ajax({
+      type: "GET",
+      url: "/tweets",
+      success: function(response){ 
+        renderTweets(response);
+      },
+    })
+  }
+
+  console.log(loadTweets());
+  
+
 
 $(function () {
   let $formID = $('#compose-tweet-form');
-  $formID.submit(function (event) { //target form on submission and prevent its default behaviour.
+  $formID.submit(function (event) { //target form on submission and prevent its default behaviour(redirect)
     console.log('Form submitted, performing ajax call...');
-    event.preventDefault();
-    let queryString = $(this).serialize();
-    $.ajax({
+    event.preventDefault();                                 
+    let queryString = $(this).serialize();        //input text to server communication
+    $.ajax({                                       //send new tweet to server and when successful render on main
       type: "POST",
       url: "/tweets",
       data: queryString,
-      success: console.log("OH GOD, OH MY, OH GOD!")
+      success: loadTweets()
     })
   });
-});
-
-$(document).ready(function(){
-function loadTweets() {
-  $.ajax({
-    type: "GET",
-    url: "/tweets",
-    success: function(response){ 
-      renderTweets(response);
-      console.log(response);
-    },
-  })
-}
-loadTweets();
 });
