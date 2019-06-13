@@ -30,17 +30,22 @@
     float: right;
 }
 
-.counter[data-status=normal] {
+#counter[data-status="normal"] {
     color: black;
 
 }
 
-.counter[data-status=over] {
+#counter[data-status="over"] {
     color: red;
 
 }
 
-.counter[data-status=warning] {
+#counter[data-status="warning"] {
     color: orange;
+}
 
+.new-tweet h3{
+    color: red;
+    opacity: 0;
+    font-size: 12px;
 }

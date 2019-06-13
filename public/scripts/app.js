@@ -59,14 +59,12 @@ $(function () {
     console.log('Form submitted, performing ajax call...');
     event.preventDefault();
     if ($(".text-area").val().length === 0) {
-
-      alert("Not so fast, buster")
-
+      $(".new-tweet h3").show().css("opacity", 1);
     } else if ($(".text-area").val().length > 140) {
-
-      alert("Take it down a notch. Or two.")
-
-    }
+      $(".new-tweet h3").show().css("opacity", 1);
+     } else{
+      $(".new-tweet h3").css("opacity", 0);
+     }
     $(".text-area").text($(".text-area").val()) // escape dangerous text inputs
     let queryString = $(this).serialize(); //input text to server communication
     $.ajax({ //send new tweet to server and when successful render on main
@@ -90,6 +88,5 @@ $(function () {
   $("#compose-button").click(function () {
     $(".new-tweet").slideToggle();
     $(".text-area").select();
-    $(".text-area").focus();
   });
 });
