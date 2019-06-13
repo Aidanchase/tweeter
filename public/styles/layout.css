@@ -40,27 +40,27 @@ body {
   width: 25em;
 }
 
-#tweet-container:hover .user-action-icons {
+.tweet-article:hover .user-action-icons {
   opacity: 1;
 }
 
-#tweet-container:hover article header {
+.tweet-article:hover article header {
   opacity: 1;
 }
 
-#tweet-container:hover .user-profile {
+.tweet-article:hover .user-profile {
   opacity: 1;
 }
 
-#tweet-container:hover .user-avatar {
+.tweet-article:hover .user-avatar {
   opacity: 1;
 }
 
-#tweet-container:hover .tweeter-handle {
+.tweet-article:hover .tweeter-handle {
   opacity: 1;
 }
 
-#tweet-container:hover footer {
+.tweet-article:hover footer {
   opacity: 1;
 }
 
