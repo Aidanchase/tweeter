@@ -36,36 +36,55 @@ function renderTweets(data) {
     $("#tweet-container").append(createTweetElement(user))
   }
 }
+
 // $(document).ready(function () {
 //   renderTweets(data);
 // })
 
 
-  function loadTweets() {
-    $.ajax({
-      type: "GET",
-      url: "/tweets",
-      success: function(response){ 
-        renderTweets(response);
-      },
-    })
-  }
+function loadTweets() {
+  $.ajax({
+    type: "GET",
+    url: "/tweets",
+    success: function (response) {
+      renderTweets(response);
+    },
+  })
+}
 
-  console.log(loadTweets());
-  
+loadTweets();
+
 
 
 $(function () {
   let $formID = $('#compose-tweet-form');
   $formID.submit(function (event) { //target form on submission and prevent its default behaviour(redirect)
     console.log('Form submitted, performing ajax call...');
-    event.preventDefault();                                 
-    let queryString = $(this).serialize();        //input text to server communication
-    $.ajax({                                       //send new tweet to server and when successful render on main
+    event.preventDefault();
+    if ($(".text-area").val().length === 0) {
+
+      alert("Not so fast, buster")
+
+    } else if ($(".text-area").val().length > 140) {
+
+      alert("Take it down a notch. Or two.")
+
+    }
+    $(".text-area").text($(".text-area").val()) // escape dangerous text inputs
+    let queryString = $(this).serialize();  //input text to server communication
+    $.ajax({ //send new tweet to server and when successful render on main
       type: "POST",
       url: "/tweets",
       data: queryString,
-      success: loadTweets()
+      success: function loadTweets() {
+        $.ajax({
+          type: "GET",
+          url: "/tweets",
+          success: function (response) {
+            renderTweets(response);
+          },
+        })
+      }
     })
   });
 });
