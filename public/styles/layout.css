@@ -40,30 +40,6 @@ body {
   width: 25em;
 }
 
-.tweet-article:hover .user-action-icons {
-  opacity: 1;
-}
-
-.tweet-article:hover article header {
-  opacity: 1;
-}
-
-.tweet-article:hover .user-profile {
-  opacity: 1;
-}
-
-.tweet-article:hover .user-avatar {
-  opacity: 1;
-}
-
-.tweet-article:hover .tweeter-handle {
-  opacity: 1;
-}
-
-.tweet-article:hover footer {
-  opacity: 1;
-}
-
 #tweet-container article {
   border: .1em solid #eee;
   border-radius: 1.5em;
@@ -128,4 +104,28 @@ body {
   padding: .2em;
   color: #70d3e5;
   opacity: 0;
+}
+
+#tweet-container article:hover .user-action-icons {
+  opacity: 1;
+}
+
+#tweet-container article:hover article header {
+  opacity: 1;
+}
+
+#tweet-container article:hover .user-profile {
+  opacity: 1;
+}
+
+#tweet-container article:hover .user-avatar {
+  opacity: 1;
+}
+
+#tweet-container article:hover .tweeter-handle {
+  opacity: 1;
+}
+
+#tweet-container article:hover footer {
+  opacity: 1;
 }

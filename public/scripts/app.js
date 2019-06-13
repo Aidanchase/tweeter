@@ -33,7 +33,7 @@ function createTweetElement(tweetData) {
 function renderTweets(data) {
   console.log(data);
   for (let user of data) {
-    $("#tweet-container").append(createTweetElement(user))
+    $("#tweet-container").prepend(createTweetElement(user))
   }
 }
 
@@ -71,7 +71,8 @@ $(function () {
       type: "POST",
       url: "/tweets",
       data: queryString,
-      success: function loadTweets() {
+        success: function loadTweets() {
+          console.log("loadTweets");
         $.ajax({
           type: "GET",
           url: "/tweets",
