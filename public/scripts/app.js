@@ -37,9 +37,6 @@ function renderTweets(data) {
   }
 }
 
-// $(document).ready(function () {
-//   renderTweets(data);
-// })
 
 
 function loadTweets() {
@@ -71,7 +68,7 @@ $(function () {
 
     }
     $(".text-area").text($(".text-area").val()) // escape dangerous text inputs
-    let queryString = $(this).serialize();  //input text to server communication
+    let queryString = $(this).serialize(); //input text to server communication
     $.ajax({ //send new tweet to server and when successful render on main
       type: "POST",
       url: "/tweets",
@@ -86,5 +83,13 @@ $(function () {
         })
       }
     })
+  });
+});
+
+$(function () {
+  $("#compose-button").click(function () {
+    $(".new-tweet").slideToggle();
+    $(".text-area").select();
+    $(".text-area").focus();
   });
 });

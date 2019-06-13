@@ -1,4 +1,4 @@
-#nav-bar{
+#nav-bar {
     position: fixed;
     align-items: center;
     width: 100%;
@@ -6,37 +6,37 @@
     top: 0;
     padding-left: 2em;
     padding-right: 2em;
-    background-color:#00a087;
+    background-color: #00a087;
     color: #e8fdff;
 }
 
-#nav-bar .logo{
+#nav-bar .logo {
     height: 80px;
     width: 80px;
     float: left;
 }
-    
-#nav-bar .header{
+
+#nav-bar .header {
     margin-left: 10px;
     font-size: 2em;
-    height: 100%    ;
+    height: 100%;
     line-height: 250%;
 }
 
-#nav-bar .compose-button{
+#nav-bar #compose-button {
     display: flex;
-    color:#00a087;
+    color: #00a087;
     border-radius: .5em;
-    background-color:rgba(255,255,255,0.75);
+    background-color: rgba(255, 255, 255, 0.75);
     justify-content: center;
     padding: 1em;
-    float:right;
+    float: right;
     width: auto;
     margin-top: .75em;
 
 }
 
-#nav-bar .compose-button:hover{
-    background-color:rgba(255,255,255,1);
-    
+#nav-bar #compose-button:hover {
+    background-color: rgba(255, 255, 255, 1);
+
 }

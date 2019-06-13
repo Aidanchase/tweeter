@@ -1,43 +1,46 @@
-.new-tweet{
+.new-tweet {
     width: 20rem;
     border: 0.1em solid #eee;
     margin: 1em auto auto auto;
     padding-left: 2rem;
-    padding-right: 2rem;    
+    padding-right: 2rem;
     padding-bottom: 4rem;
     background-color: #eee;
     border-radius: 1.5em;
     margin-bottom: 2em;
-  }
-  .new-tweet hr{
-      padding : .25em;
-      border-left-width: 0px;
-  }
-  .text-area{
-    padding:1em;
-    width: 100%;
-  }
+}
 
-.new-tweet input{
-    padding:.6em;
+.new-tweet hr {
+    padding: .25em;
+    border-left-width: 0px;
+}
+
+.text-area {
+    padding: 1em;
+    width: 100%;
+}
+
+.new-tweet input {
+    padding: .6em;
     border-radius: .4em;
     float: left;
 }
-.new-tweet span{
+
+.new-tweet span {
     float: right;
 }
 
-.counter[data-status=normal]{
+.counter[data-status=normal] {
     color: black;
 
 }
 
-.counter[data-status=over]{
+.counter[data-status=over] {
     color: red;
 
 }
 
-.counter[data-status=warning]{
+.counter[data-status=warning] {
     color: orange;
 
 }
