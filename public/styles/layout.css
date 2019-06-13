@@ -107,6 +107,7 @@ body {
 }
 
 #tweet-container article:hover .user-action-icons {
+  /* tweet container becomes more opaque on hover*/
   opacity: 1;
 }
 

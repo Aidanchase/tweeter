@@ -30,6 +30,7 @@
     float: right;
 }
 
+/*sets counter color based on status*/
 #counter[data-status="normal"] {
     color: black;
 
@@ -44,7 +45,7 @@
     color: orange;
 }
 
-.new-tweet h3{
+.new-tweet h3 {
     color: red;
     opacity: 0;
     font-size: 12px;

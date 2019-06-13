@@ -1,4 +1,4 @@
-function createTweetElement(tweetData) {
+function createTweetElement(tweetData) { //template literals used to render new tweet container and styling
   let HTMLTemplate = `<article>
         <header class="user-info">
           <div class="user-profile">
@@ -39,7 +39,7 @@ function renderTweets(data) {
 
 
 
-function loadTweets() {
+function loadTweets() { //$jquery/ ajax request to load new tweets onto page and add tweets to database
   $.ajax({
     type: "GET",
     url: "/tweets",
@@ -58,21 +58,21 @@ $(function () {
   $formID.submit(function (event) { //target form on submission and prevent its default behaviour(redirect)
     console.log('Form submitted, performing ajax call...');
     event.preventDefault();
-    if ($(".text-area").val().length === 0) {
+    if ($(".text-area").val().length === 0) { //shows error message if tweet is empty /or too long
       $(".new-tweet h3").show().css("opacity", 1);
     } else if ($(".text-area").val().length > 140) {
       $(".new-tweet h3").show().css("opacity", 1);
-     } else{
+    } else {
       $(".new-tweet h3").css("opacity", 0);
-     }
+    }
     $(".text-area").text($(".text-area").val()) // escape dangerous text inputs
     let queryString = $(this).serialize(); //input text to server communication
     $.ajax({ //send new tweet to server and when successful render on main
       type: "POST",
       url: "/tweets",
       data: queryString,
-        success: function loadTweets() {
-          console.log("loadTweets");
+      success: function loadTweets() {
+        console.log("loadTweets");
         $.ajax({
           type: "GET",
           url: "/tweets",
@@ -86,7 +86,7 @@ $(function () {
 });
 
 $(function () {
-  $("#compose-button").click(function () {
+  $("#compose-button").click(function () { //toggles compose tweet form on click
     $(".new-tweet").slideToggle();
     $(".text-area").select();
   });
