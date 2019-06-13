@@ -23,10 +23,12 @@
 </head>
 
 <body>
-  <!-- Top nav bar (fixed) -->
   <nav id="nav-bar">
     <img class="logo" src="/images/bird.png">
     <span class="header">Tweeter</span>
+  </span>
+    <button class="compose-button">
+     <i class="fa fa-pencil-square-o"></i>Compose</button>
   </nav>
 
   <!-- Page-specific (main) content here -->
@@ -35,7 +37,8 @@
       <h2>Compose Tweet</h2>
       <hr>
       <form id="compose-tweet-form" action="/tweets" method="POST">
-        <textarea id="compose-tweet-field" class="text-area" name="text" placeholder="What are you humming about?"></textarea>
+        <textarea id="compose-tweet-field" class="text-area" name="text"
+          placeholder="What are you humming about?"></textarea>
         <input id="compose-tweet" type="submit" value="Tweet">
         <span id="counter">140</span>
       </form>
