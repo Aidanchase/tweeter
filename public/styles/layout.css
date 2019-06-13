@@ -28,7 +28,7 @@ body {
 .container {
   margin: 10em auto 0 auto;
   width: 45em;
-  height: 100em;
+  height: auto;
   background-color: #ffffff;
   padding-top: .1em;
 }
@@ -37,7 +37,7 @@ body {
 #tweet-container {
   border-radius: 1.5em;
   margin: 1em auto 4em auto;
-  width: 20em;
+  width: 25em;
 }
 
 #tweet-container:hover .user-action-icons{
