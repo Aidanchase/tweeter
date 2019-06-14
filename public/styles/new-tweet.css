@@ -49,7 +49,7 @@
 }
 
 #counter[data-status="warning"] {
-    color: orange;
+    color: #ffe514;
 }
 
 .new-tweet h3 {
