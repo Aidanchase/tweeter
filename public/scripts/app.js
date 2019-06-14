@@ -15,7 +15,7 @@ function createTweetElement(tweetData) { //template literals used to render new 
         <hr class="footer-hr">
         <footer>
           <span class="time-stamp">
-            ${tweetData.created_at}
+            ${timeAgo(tweetData.created_at)}
           </span>
           <span class="user-action-icons">
             <i class="fa fa-flag"></i>
@@ -36,7 +36,7 @@ function renderTweets(data) {
   }
 }
 
-function renderTweet(data){
+function renderTweet(data) {
   $("#tweet-container").prepend(createTweetElement(data))
 }
 
@@ -78,7 +78,7 @@ $(function () {
           type: "GET",
           url: "/tweets",
           success: function (response) {
-            renderTweet(response[response.length -1]); 
+            renderTweet(response[response.length - 1]);
           },
         })
       }
@@ -88,7 +88,9 @@ $(function () {
 
 $(function () {
   $("#compose-button").click(function () { //toggles compose tweet form on click
-    $("html, body").animate({scrollTop: 0}, "slow");
+    $("html, body").animate({
+      scrollTop: 0
+    }, "slow");
     $(".new-tweet").slideToggle();
     $(".text-area").select();
   });
