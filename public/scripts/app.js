@@ -30,32 +30,39 @@ function createTweetElement(tweetData) { //template literals used to render new 
   return HTMLTemplate;
 }
 
-function renderTweets(data) {
-  for (let user of data) {
-    $("#tweet-container").prepend(createTweetElement(user))
-  }
-}
+// function renderTweets(data) {
+//   for (let user of data) {
+//     $("#tweet-container").prepend(createTweetElement(user))
+//   }
+// }
 
 function renderTweet(data) {
   $("#tweet-container").prepend(createTweetElement(data))
 }
 
-function loadTweets() { //$jquery/ ajax request to load new tweets onto page and add tweets to database
+function loadTweets(callback) { //$jquery/ ajax request to load new tweets onto page and add tweets to database
   $.ajax({
     type: "GET",
     url: "/tweets",
-    success: function (response) {
-      renderTweets(response);
-    },
+    success: callback 
   })
-}
+};
 
-loadTweets();
+loadTweets(function (response) {
+  response.forEach((tweet) => renderTweet(tweet))
+});
 
 
 
 $(function () {
-  let $formID = $('#compose-tweet-form');
+  $("#compose-button").click(function () { //toggles compose tweet form on click
+    $("html, body").animate({
+      scrollTop: 0
+    }, "slow");
+    $(".new-tweet").slideToggle();
+    $(".text-area").select();
+  });
+let $formID = $('#compose-tweet-form');
   $formID.submit(function (event) { //target form on submission and prevent its default behaviour(redirect)
     console.log('Form submitted, performing ajax call...');
     event.preventDefault();
@@ -72,26 +79,23 @@ $(function () {
       type: "POST",
       url: "/tweets",
       data: queryString,
-      success: function loadTweets() {
-        console.log("loadTweets");
-        $.ajax({
-          type: "GET",
-          url: "/tweets",
-          success: function (response) {
-            renderTweet(response[response.length - 1]);
-          },
-        })
-      }
-    })
+      success: loadTweets.bind(null, function (response) {
+        let lastTweet = response[response.length-1];
+        renderTweet(lastTweet);
+      })
+    });
   });
 });
 
-$(function () {
-  $("#compose-button").click(function () { //toggles compose tweet form on click
-    $("html, body").animate({
-      scrollTop: 0
-    }, "slow");
-    $(".new-tweet").slideToggle();
-    $(".text-area").select();
-  });
-});
+
+// {
+//   console.log("loadTweets");
+//   $.ajax({
+//     type: "GET",
+//     url: "/tweets",
+//     success: function (response) {
+//       let singleTweet = response[response.length - 1]
+//       renderTweets([singleTweet]);
+//     },
+//   })
+// }
