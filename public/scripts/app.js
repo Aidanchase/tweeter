@@ -88,6 +88,7 @@ $(function () {
 
 $(function () {
   $("#compose-button").click(function () { //toggles compose tweet form on click
+    $("html, body").animate({scrollTop: 0}, "slow");
     $(".new-tweet").slideToggle();
     $(".text-area").select();
   });
