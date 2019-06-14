@@ -24,5 +24,5 @@ Within this repository you will find the various functionality and styling eleme
 
 ## Screenshots
 
-!["Screenshot of compose tweets section!"](https://github.com/Aidanchase/tweeter/blob/master/docs/Past-tweets.png?raw=true)
 !["Screenshot of previously posted tweets"](https://github.com/Aidanchase/tweeter/blob/master/docs/nav-bar-and-compose-tweet.png?raw=true)
+!["Screenshot of compose tweets section!"](https://github.com/Aidanchase/tweeter/blob/master/docs/Past-tweets.png?raw=true)
