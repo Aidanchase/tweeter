@@ -21,12 +21,10 @@ function createTweetElement(tweetData) { //template literals used to render new 
             <i class="fa fa-flag"></i>
             <i class="fa fa-pied-piper-alt"></i>
             <i class="fa fa-heart"></i>
-
           </span>
         </footer>
       </article>
-     
-      `;
+     `;
   return HTMLTemplate;
 }
 

@@ -1,6 +1,5 @@
 function timeAgo(ts) {
                            //calculating time since post
-
    var d = new Date();
    var nowTs = d.getTime();
                            //calculate difference of milliseconds
