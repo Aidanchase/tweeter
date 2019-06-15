@@ -30,12 +30,6 @@ function createTweetElement(tweetData) { //template literals used to render new 
   return HTMLTemplate;
 }
 
-// function renderTweets(data) {
-//   for (let user of data) {
-//     $("#tweet-container").prepend(createTweetElement(user))
-//   }
-// }
-
 function renderTweet(data) {
   $("#tweet-container").prepend(createTweetElement(data))
 }
@@ -44,15 +38,13 @@ function loadTweets(callback) { //$jquery/ ajax request to load new tweets onto 
   $.ajax({
     type: "GET",
     url: "/tweets",
-    success: callback 
+    success: callback
   })
 };
 
 loadTweets(function (response) {
   response.forEach((tweet) => renderTweet(tweet))
 });
-
-
 
 $(function () {
   $("#compose-button").click(function () { //toggles compose tweet form on click
@@ -62,7 +54,7 @@ $(function () {
     $(".new-tweet").slideToggle();
     $(".text-area").select();
   });
-let $formID = $('#compose-tweet-form');
+  let $formID = $('#compose-tweet-form');
   $formID.submit(function (event) { //target form on submission and prevent its default behaviour(redirect)
     console.log('Form submitted, performing ajax call...');
     event.preventDefault();
@@ -80,22 +72,9 @@ let $formID = $('#compose-tweet-form');
       url: "/tweets",
       data: queryString,
       success: loadTweets.bind(null, function (response) {
-        let lastTweet = response[response.length-1];
+        let lastTweet = response[response.length - 1];
         renderTweet(lastTweet);
       })
     });
   });
 });
-
-
-// {
-//   console.log("loadTweets");
-//   $.ajax({
-//     type: "GET",
-//     url: "/tweets",
-//     success: function (response) {
-//       let singleTweet = response[response.length - 1]
-//       renderTweets([singleTweet]);
-//     },
-//   })
-// }

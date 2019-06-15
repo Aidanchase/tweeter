@@ -34,9 +34,6 @@ body {
   box-shadow: 3px 6px 20px 0px #353535, -10px 9px 20px 0px #3838384f, -20px 19px 15px -4px rgba(0, 0, 0, 0.24), -20px 18px 15px -4px rgba(255, 0, 10, 0);
 }
 
-
-
-
 #tweet-container {
   border-radius: 1.5em;
   margin: 1em auto 4em auto;
@@ -112,8 +109,7 @@ body {
 }
 
 #tweet-container article:hover .user-action-icons {
-  /* tweet container becomes more opaque on hover*/
-  opacity: 1;
+  opacity: 1; /* tweet container becomes more opaque on hover*/
 }
 
 #tweet-container article:hover article header {
