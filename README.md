@@ -5,7 +5,7 @@ Tweeter is a simple, single-page twitter clone, with a touch of nostalgia.
 Within this repository you will find the various functionality and styling elements which went into making tweeter what it is **TODAY!**
 
 >The price good men pay for indifference to public affairs is to be ruled by evil men. 
-** - Plato **
+**- Plato**
 
 ## Getting Started
 
