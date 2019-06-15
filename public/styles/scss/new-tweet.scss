@@ -1,0 +1,73 @@
+$new-tweet-border: 0.1em solid black;
+$new-tweet-bg-color: #ffb431;
+$new-tweet-shadow: -12px 14px 20px 0px rgba(0, 0, 0, 0.2);
+$new-tweet-hr-bg: black;
+$tweety-yellow: #ffe514;
+$new-tweet-button-shadow: -6px 7px 20px 0px rgba(0, 0, 0, 0.2);
+$counter-over: red;
+
+
+.new-tweet {
+    width: 20rem;
+    border: $new-tweet-border;
+    margin: 1em auto auto auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 4rem;
+    border-radius: 1.5em;
+    margin-bottom: 2em;
+    background-color: $new-tweet-bg-color;
+    box-shadow: $new-tweet-border;
+}
+
+.new-tweet {
+    hr {
+        padding: 0;
+        height: 1px;
+        border-style: solid;
+        background-color: $new-tweet-hr-bg;
+    }
+}
+
+.text-area {
+    padding: 1em;
+    width: 100%;
+}
+
+.new-tweet {
+    input {
+        padding: .6em;
+        border-radius: .4em;
+        border-color: $new-tweet-hr-bg;
+        float: left;
+        background-color: $tweety-yellow;
+        box-shadow: $new-tweet-button-shadow;
+    }
+}
+
+.new-tweet {
+    span {
+        float: right;
+    }
+}
+
+/*sets counter color based on status*/
+#counter[data-status="normal"] {
+    color: $new-tweet-hr-bg;
+}
+
+#counter[data-status="over"] {
+    color: $counter-over;
+}
+
+#counter[data-status="warning"] {
+    color: $tweety-yellow;
+}
+
+.new-tweet {
+    h3 {
+        color: $counter-over;
+        opacity: 0;
+        font-size: 12px;
+    }
+}

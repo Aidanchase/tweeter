@@ -1,0 +1,50 @@
+$font-stack: "Pacifico",
+"Sans-serif";
+$tweety-yellow: #FFF700;
+$nav-backround: linear-gradient(315deg, #E1393E 0%, #FFB531 50%);
+$nav-box-shadow: -18px 20px 20px 0px rgba(0, 0, 0, .2);
+$compose-button-shadow: -11px 12px 20px 0px rgba(0, 0, 0, 0.2);
+$compose-button-text-color: black;
+$compose-button-color: rgba(255, 255, 255, 0.75);
+$compose-button-hover: rgba(255, 255, 255, 1);
+
+@import "nav-container";
+
+#nav-bar {
+    .logo {
+        height: 140px;
+        float: left;
+    }
+}
+
+#nav-bar {
+    .header {
+        color: $tweety-yellow;
+        margin-left: 10px;
+        font-size: 2em;
+        height: 100%;
+        line-height: 150px;
+        font-family: $font-stack;
+    }
+}
+
+#nav-bar {
+    #compose-button {
+        display: flex;
+        color: $compose-button-text-color;
+        border-radius: .5em;
+        background-color: $compose-button-color;
+        justify-content: center;
+        padding: 1.5em;
+        float: right;
+        width: auto;
+        margin-top: 2.5em;
+        box-shadow: $compose-button-shadow
+    }
+}
+
+#nav-bar {
+    #compose-button:hover {
+        background-color: $compose-button-hover;
+    }
+}

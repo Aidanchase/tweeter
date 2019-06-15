@@ -1,0 +1,28 @@
+%hovered-container{
+    opacity: 1;
+}
+
+#tweet-container article:hover .user-action-icons {
+    @extend %hovered-container;
+    /* tweet container becomes more opaque on hover*/
+}
+
+#tweet-container article:hover article header {
+    @extend %hovered-container;
+}
+
+#tweet-container article:hover .user-profile {
+    @extend %hovered-container;
+}
+
+#tweet-container article:hover .user-avatar {
+    @extend %hovered-container;
+}
+
+#tweet-container article:hover .tweeter-handle {
+    @extend %hovered-container;
+}
+
+#tweet-container article:hover footer {
+    @extend %hovered-container;
+}

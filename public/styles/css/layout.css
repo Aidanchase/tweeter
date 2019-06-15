@@ -3,27 +3,19 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
-
 html {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
-}
-
-/*
- * Global layout stuff
- */
+  box-sizing: inherit; }
 
 body {
   margin: 0;
   color: #244751;
   background-color: #E1393E;
-  font-family: 'Roboto Condensed', sans-serif;
-}
+  font-family: "Roboto Condensed", sans-serif; }
 
 .container {
   margin: 10em auto 0 auto;
@@ -31,103 +23,72 @@ body {
   height: auto;
   background-color: #ffffff;
   padding-top: .1em;
-  box-shadow: 3px 6px 20px 0px #353535, -10px 9px 20px 0px #3838384f, -20px 19px 15px -4px rgba(0, 0, 0, 0.24), -20px 18px 15px -4px rgba(255, 0, 10, 0);
-}
+  box-shadow: 3px 6px 20px 0px #353535, -10px 9px 20px 0px #3838384f, -20px 19px 15px -4px rgba(0, 0, 0, 0.24), -20px 18px 15px -4px rgba(255, 0, 10, 0); }
 
 #tweet-container {
   border-radius: 1.5em;
   margin: 1em auto 4em auto;
-  width: 25em;
-}
+  width: 25em; }
 
 #tweet-container article {
-  border: .1em solid #aaaaaa;
+  border: 0.1em solid #aaaaaa;
   border-radius: 1.5em;
-  margin: 2em;
-}
+  margin: 2em; }
 
 #tweet-container article header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #eee;
   border-top-left-radius: 1.5em;
   border-top-right-radius: 1.5em;
   background-color: #FFB531;
-  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.2);
-}
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.2); }
 
 #tweet-container article header .user-profile {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  opacity: 0.5;
-}
+  opacity: 0.5; }
 
 #tweet-container article header .user-profile .user-avatar {
   padding: 1em;
   border-radius: 1.5em;
-  opacity: 0.5;
-}
+  opacity: 0.5; }
 
 #tweet-container article header .tweeter-handle {
   justify-content: flex-end;
   color: black;
   padding: .5em;
-  opacity: 0.5;
-}
+  opacity: 0.5; }
 
 #tweet-container .tweet-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 6em;
-  padding: .5em;
-}
+  padding: .5em; }
 
 #tweet-container footer {
   display: flex;
   justify-content: space-between;
   align-content: center;
   padding: .4em;
-  opacity: 0.5;
-}
+  opacity: 0.5; }
 
 #tweet-container hr {
-  opacity: 0.2;
-}
+  opacity: 0.2; }
 
 #tweet-container footer .time-stamp {
   padding: .2em;
-  opacity: 1;
-}
+  opacity: 1; }
 
 #tweet-container footer .user-action-icons {
   padding: .2em;
-  color: #e1383e;
-  opacity: 0;
-}
+  color: #E1393E;
+  opacity: 0; }
+
+#tweet-container article:hover .user-action-icons, #tweet-container article:hover article header, #tweet-container article:hover .user-profile, #tweet-container article:hover .user-avatar, #tweet-container article:hover .tweeter-handle, #tweet-container article:hover footer {
+  opacity: 1; }
 
 #tweet-container article:hover .user-action-icons {
-  opacity: 1; /* tweet container becomes more opaque on hover*/
-}
-
-#tweet-container article:hover article header {
-  opacity: 1;
-}
-
-#tweet-container article:hover .user-profile {
-  opacity: 1;
-}
-
-#tweet-container article:hover .user-avatar {
-  opacity: 1;
-}
-
-#tweet-container article:hover .tweeter-handle {
-  opacity: 1;
-}
-
-#tweet-container article:hover footer {
-  opacity: 1;
-}
+  /* tweet container becomes more opaque on hover*/ }
