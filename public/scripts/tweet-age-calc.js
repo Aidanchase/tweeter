@@ -4,7 +4,7 @@ function timeAgo(ts) {
    const nowTs = d.getTime();
    //calculate difference of milliseconds
    const seconds = Math.floor((nowTs - ts) / 1000);
-
+   
    if (seconds > 365 * 24 * 3600) { //if more than a year 
       return "Over a year ago";
    } else if (seconds > 2 * 24 * 3600) { //if more than 2 days
@@ -24,9 +24,13 @@ function timeAgo(ts) {
    else if (seconds > 1800) {
       return "Half an hour ago";
    }
+
+   else if (seconds > 120){
+      return "Over 2 minutes ago"
+   }
    //if within Minutes
    else if (seconds > 60) {
-      return Math.floor(seconds / 60) + " minutes ago";
+    return "Over a minute ago";
    }
 
    // if within a minute
