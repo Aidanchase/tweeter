@@ -1,9 +1,9 @@
 function timeAgo(ts) {
                      //calculates  time in seconds
-   var date = new Date();
-   var nowTime = date.getTime();
+   const date = new Date();
+   const nowTime = date.getTime();
                    //get milliseconds and / by 1000 for secs
-   var seconds = Math.floor((nowTime - ts) / 1000);
+   const seconds = Math.floor((nowTime - ts) / 1000);
 
    // over a year
    if(seconds > 365 * 24* 3600){
