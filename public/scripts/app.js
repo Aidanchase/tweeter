@@ -1,5 +1,5 @@
 function createTweetElement(tweetData) { //template literals used to render new tweet container and styling
-  let HTMLTemplate = `<article>
+  const HTMLTemplate = `<article>
         <header class="user-info">
           <div class="user-profile">
             <img class="user-avatar" src="${tweetData.user.avatars.small}">
@@ -55,7 +55,7 @@ $(function () {
     $(".new-tweet").slideToggle();
     $(".text-area").select();
   });
-  let $formID = $('#compose-tweet-form');
+  const $formID = $('#compose-tweet-form');
   $formID.submit(function (event) { //target form on submission and prevent its default behaviour(redirect)
     console.log('Form submitted, performing ajax call...');
     event.preventDefault();
@@ -66,13 +66,13 @@ $(function () {
     } else {
       $(".new-tweet h3").css("opacity", 0);
       $(".text-area").text($(".text-area").val()) // escape dangerous text inputs
-      let queryString = $(this).serialize(); //input text to server communication
+      const queryString = $(this).serialize(); //input text to server communication
       $.ajax({ //send new tweet to server and when successful render on main
         type: "POST",
         url: "/tweets",
         data: queryString,
         success: loadTweets.bind(null, function (response) {
-          let lastTweet = response[response.length - 1];
+          const lastTweet = response[response.length - 1];
           renderTweet(lastTweet);
         })
       })
