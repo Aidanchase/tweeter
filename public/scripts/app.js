@@ -45,6 +45,9 @@ loadTweets(function (response) {
 });
 
 $(function () {
+  $(".text-area").keydown(function(){
+    $(".new-tweet h3").show().css("opacity", 0);
+  });
   $("#compose-button").click(function () { //toggles compose tweet form on click
     $("html, body").animate({
       scrollTop: 0
@@ -62,17 +65,17 @@ $(function () {
       $(".new-tweet h3").show().css("opacity", 1);
     } else {
       $(".new-tweet h3").css("opacity", 0);
-    }
-    $(".text-area").text($(".text-area").val()) // escape dangerous text inputs
-    let queryString = $(this).serialize(); //input text to server communication
-    $.ajax({ //send new tweet to server and when successful render on main
-      type: "POST",
-      url: "/tweets",
-      data: queryString,
-      success: loadTweets.bind(null, function (response) {
-        let lastTweet = response[response.length - 1];
-        renderTweet(lastTweet);
+      $(".text-area").text($(".text-area").val()) // escape dangerous text inputs
+      let queryString = $(this).serialize(); //input text to server communication
+      $.ajax({ //send new tweet to server and when successful render on main
+        type: "POST",
+        url: "/tweets",
+        data: queryString,
+        success: loadTweets.bind(null, function (response) {
+          let lastTweet = response[response.length - 1];
+          renderTweet(lastTweet);
+        })
       })
-    });
-  });
+    }
+  })
 });

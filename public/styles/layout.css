@@ -83,6 +83,7 @@ body {
   justify-content: center;
   height: 6em;
   padding: .5em;
+  word-wrap: break-word;
 }
 
 #tweet-container footer {
